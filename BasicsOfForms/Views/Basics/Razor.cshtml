@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Razor";
+}
+
+
+@using (Html.BeginForm("basics/razor"))
+{
+    @Html.TextBox("Email");
+    @Html.Password("Password");
+    @Html.Password("Password Confirmation");
+    <input type="submit" value="Submit">
+}
