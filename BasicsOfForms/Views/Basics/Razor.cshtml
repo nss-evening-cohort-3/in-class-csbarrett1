@@ -3,9 +3,11 @@
     ViewBag.Title = "Razor";
 }
 
+<h2>Razor</h2>
 
-@using (Html.BeginForm("basics/razor"))
+@using (Html.BeginForm("Razor", "Basics", FormMethod.Post))
 {
+    @Html.AntiForgeryToken()
     @Html.TextBox("Email");
     @Html.Password("Password");
     @Html.Password("Password Confirmation");

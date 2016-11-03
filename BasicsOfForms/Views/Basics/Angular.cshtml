@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Angular";
+}
+
+<h2>Angular</h2>
+
+<div ng-controller="FormController">
+    @using (Html.BeginForm("Angular", "Basics", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.TextBox("Email");
+        @Html.Password("Password");
+        @Html.Password("Password Confirmation");
+        <button ng-click="formSubmit()">Submit!</button>
+    }
+</div>
